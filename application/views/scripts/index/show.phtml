@@ -1,0 +1,26 @@
+<?php 
+$this->dojo()->enable()
+			->requireModule('dijit.form.Button')
+			->requireModule('dijit.Dialog');
+
+$server = ereg_replace("www\\.", "", $_SERVER['SERVER_NAME']);
+
+$origUrl = $this->urlObj->getUrl();
+if(strlen($origUrl) > 30){
+	$origUrl = substr($origUrl,0,27) . "...";
+}
+
+$url = 'http://'. $server . '/'. $this->urlObj->getKey();
+
+echo '<div id="result">';
+echo $this->translate("INDEX_SHOW_SHORTFORM_1") . " ";
+echo $origUrl;
+echo ' ' . $this->translate("INDEX_SHOW_SHORTFORM_2") . ' <a href="'.$url.'" target="_blank">'.$url.'</a>';
+
+echo $this->copyPasteForm;
+echo '</div><br>';
+
+$this->form->setAction($this->url());
+echo $this->form;
+
+?>

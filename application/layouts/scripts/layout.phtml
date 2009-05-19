@@ -1,0 +1,28 @@
+<?php 
+// application/layouts/scripts/layout.phtml
+echo $this->doctype() ?>
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head>  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+  <title><?php echo $this->translate("HEAD_TITLE")?></title>
+  <?php 
+  echo $this->headLink(Array('rel' => 'icon', 'href' => '/images/favicon.ico', 'type' => 'image/x-icon'));
+  echo $this->headScript();
+  echo $this->headLink()->appendStylesheet('/css/global.css');
+	if ($this->dojo()->isEnabled()){
+		$this->dojo()->setLocalPath('/js/dojo/dojo.js');
+		$this->dojo()->addStyleSheetModule('dijit.themes.nihilo');
+	    
+	    echo $this->dojo();
+	   }
+
+  ?>
+</head> 
+<body class="nihilo">
+<div id ="header"><div id="languageicons"><a href="/language/index/locale/de"><img id = "imageLink" src="/images/flags/de.png"></a> <a href="/language/index/locale/en"><img src="/images/flags/gb.png"></a></div><div id ="header_subline"><?php echo $this->translate("HEADER_SUBLINE")?></div></div>
+
+<div id="bodyPan">
+<?php echo $this->layout()->content ?>
+</div><div id="bodybottomPan">&copy; 2009 <a href="http://www.basis42.de">basis42</a></div>
+</body>
+</html>

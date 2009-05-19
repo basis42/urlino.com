@@ -1,0 +1,14 @@
+HEAD_TITLE;urlino.com - short urls
+
+HEADER_SUBLINE;... eating up URLS since 2009!
+
+INDEX_INDEX_INTRO_HEADLINE;Short URLs, what are they good for?
+INDEX_INDEX_INTRO_MAINTEXT;Imagine you found a nice article around the web you want to share with a mate. You just copy the URL from the browser to a mail and send it. If it's a long URL it is most likely that it gets wrapped by your mates email client and BOOM, it doesn't work when clicked on. Urlino is the solution: Just copy the long URL to the box below, press shorten URL and you will <strong>get a short URL instantly!</strong>
+
+INDEX_SHOW_SHORTFORM_1;Short form for
+INDEX_SHOW_SHORTFORM_2;is
+
+INDEX_FORM_GETURL;shorten URL
+
+POPUP_ERROR;Uh ... there's a little problem!
+INVALID_URL;is not a valid URL!

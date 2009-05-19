@@ -1,0 +1,34 @@
+@CHARSET "ISO-8859-1";
+body{background:url(/images/main-bg.gif) 0 0 repeat-x #A8A39D; color:#1A1917; margin:0; padding:0; font:14px/20px Arial, Helvetica, sans-serif;}
+div, p, h1, h2, h3, ul{padding:0px; margin:0px;}
+ul{list-style-type:none;}
+a > img { border: 0 none; }
+
+a:link {color:#43AA1C; }
+a:visited {color:#27A006; }
+a:hover {color:#3C3734; }
+a:active { color: #ffffff;} 
+
+#header{background:url(/images/top.png) no-repeat; background-position: right; height:97px; margin:0; padding:0;}
+#header_subline{text-align: right; vertical-align: bottom; margin: 0px; padding:85px 22px 0 20px; color:#ffffff; font-family: sans-serif; font-style: italic; font-weight: bold;}
+#languageicons{float:left; padding-top: 86px; padding-left: 5px;}
+
+#bodyPan{width:644px; background:url(/images/topMain.png) 0 0 no-repeat; color:#1A1917; position:relative; margin:20px auto 0; padding: 20px 20px 0px 20px;}
+
+#bodybottomPan{width:684px; height:42px; background:url(/images/bottomMain.png) 0 0 no-repeat; position:relative; margin:0 auto; clear:both; text-align: center; font-family: sans-serif; font-style: italic; font-weight: bold;}
+
+#urlLabel{ float:left; font-size:18px; width: 474px; padding-top: 5px;}
+#urlSubmit{}
+
+#urlForm{ }
+#urlForm input{ font-size:18px; height:22px; width:410px;}
+#urlForm input[type="submit"]{width:150px; height:40px; }
+
+#urlError{position:relative; z-index: 2; color: fuchsia; top: 100px; left: 100px;}
+
+#copyForm #copyPasteLabel{ padding-top: 10px;}
+#copyForm #copyPaste{ font-size:18px; height:22px; width:210px;}
+
+#result{text-align: center; font-size:18px; }
+#textMain{ font-size:12px; padding-bottom:5px; line-height: 14px;}
+#textHeadline{ font-size:18px; text-decoration: underline; padding-bottom:15px;}
