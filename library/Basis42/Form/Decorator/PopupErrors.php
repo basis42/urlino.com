@@ -23,14 +23,12 @@ class Basis42_Form_Decorator_PopupErrors extends Zend_Form_Decorator_Errors {
 		$errors = implode ( " ", $errors );
 		$view->headScript()->captureStart();
 		
-		echo
-		    'function closeDialog(){
-				dijit.registry.filter(function(w){ 
-    				return w && w.declaredClass == "dijit.Dialog" 
-				}).forEach(function(w){ 
-    					w.hide(); 
-				});
-		}';		
+		echo '
+		function closeDialog(){
+			var confirm = dijit.byId("conf");
+			confirm.hide();
+		}
+		';		
 		$view->headScript()->captureEnd();
 		
 		$view->dojo()->onLoadCaptureStart();
