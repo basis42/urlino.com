@@ -11,12 +11,28 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
 		$translate = new Zend_Translate('csv', APPLICATION_PATH . '/languages/lang_en.csv', 'en');
 		$translate->addTranslation(APPLICATION_PATH . '/languages/lang_de.csv', 'de');
 		$session = new Zend_Session_Namespace();
+		
 		if($session->locale != NULL){
 			$translate->setLocale($session->locale);
 		}
 		else{
-			$translate->setLocale("browser");
+			try{
+				$zend_locale = new Zend_Locale(Zend_Locale::BROWSER);
+				$browser_language = $zend_locale->getLanguage();
+				$browser_locale = $zend_locale->toString();
+				}
+			catch(Zend_Locale_Exception $e){
+				$browser_language = "";
+			}
+
+			$site_language = "en";
+			if ($browser_language == 'de') {
+				$site_language = 'de';
+			}
+		
+			$translate->setLocale($site_language);
 		}
+		
 		Zend_Registry::set('Zend_Translate', $translate);
 		
 	}
