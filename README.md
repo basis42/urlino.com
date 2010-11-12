@@ -13,7 +13,7 @@ will be more than happy to integrate them :-)!
 To get started create a fresh MySql database named zf und a user zf with password zf on localhost and 
 copy ./application/configs/application_localhost.ini to ./application/configs/application.ini
 
-Go to [http://framework.zend.com/download/latest] and download the laterst version of Zend Framework and 
+Go to (http://framework.zend.com/download/latest) and download the laterst version of Zend Framework and 
 copy the folder library/Zend from the downloaded package to ./library   
 
 The directory ./resources/sql contains the file setup.sql providing al needed sql to initialize the 
